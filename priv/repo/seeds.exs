@@ -9,3 +9,14 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+#
+alias Blog.Repo
+alias Blog.Admin.Post
+
+Faker.start
+
+create_post = fn(_) ->
+  Repo.insert!(%Post{title: Faker.Lorem.Shakespeare.hamlet})
+end
+
+Enum.each 1..100, create_post
