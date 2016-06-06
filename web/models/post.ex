@@ -1,4 +1,4 @@
-defmodule Blog.Admin.Post do
+defmodule Blog.Post do
   use Blog.Web, :model
 
   schema "posts" do

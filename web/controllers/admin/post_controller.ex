@@ -1,7 +1,7 @@
 defmodule Blog.Admin.PostController do
   use Blog.Web, :controller
 
-  alias Blog.Admin.Post
+  alias Blog.Post
 
   plug :scrub_params, "post" when action in [:create, :update]
 

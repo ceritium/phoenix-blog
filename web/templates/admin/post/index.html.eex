@@ -4,8 +4,6 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Content</th>
-
       <th></th>
     </tr>
   </thead>
@@ -13,7 +11,6 @@
 <%= for post <- @posts do %>
     <tr>
       <td><%= post.title %></td>
-      <td><%= post.content %></td>
 
       <td class="text-right">
         <%= link "Show", to: admin_post_path(@conn, :show, post), class: "btn btn-default btn-xs" %>
