@@ -39,6 +39,7 @@ defmodule Blog.Mixfile do
      {:faker, "~> 0.5", only: [:test, :dev]},
      {:scrivener, "~> 1.0"},
      {:scrivener_html, "~> 1.1"},
+     {:addict, "~> 0.2"},
      {:cowboy, "~> 1.0"}]
   end
 

@@ -9,11 +9,17 @@
 
     <title>Hello Blog!</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
   </head>
 
   <body>
     <div class="container">
       <header class="header">
+        <ol class="breadcrumb text-right">
+            <li>
+               <a href="#" onclick='javascript:$.ajax({url:"/logout", method: "DELETE"})'>Logout</a>
+            </li>
+        </ol>
         <nav role="navigation">
           <ul class="nav nav-pills pull-right">
             <li><a href="http://www.phoenixframework.org/docs">Get Started</a></li>

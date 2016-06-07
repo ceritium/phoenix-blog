@@ -1,9 +1,10 @@
 defmodule Blog.Admin.PostController do
   use Blog.Web, :controller
-
   alias Blog.Post
 
   plug :scrub_params, "post" when action in [:create, :update]
+  plug Addict.Plugs.Authenticated when action in [:index]
+
 
   def index(conn, _params) do
     posts = Repo.paginate(Post, _params)

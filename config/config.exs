@@ -30,3 +30,11 @@ config :phoenix, :generators,
 
 config :scrivener_html,
   routes_helper: Blog.Router.Helpers
+
+config :addict,
+  secret_key: "2432622431322438736c6470734f384875766c586953434573564c7775",
+  extra_validation: fn ({valid, errors}, user_params) -> {valid, errors} end, # define extra validation here
+  user_schema: Blog.User,
+  repo: Blog.Repo,
+  from_email: "no-reply@example.com", # CHANGE THIS
+mail_service: nil
