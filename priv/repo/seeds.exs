@@ -11,7 +11,7 @@
 # and so on) as they will fail if something goes wrong.
 #
 alias Blog.Repo
-alias Blog.Admin.Post
+alias Blog.Post
 
 Faker.start
 
