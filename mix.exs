@@ -19,7 +19,7 @@ defmodule Blog.Mixfile do
   def application do
     [mod: {Blog, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex]]
+                    :phoenix_ecto, :postgrex, :comeonin]]
   end
 
   # Specifies which paths to compile per environment.
@@ -39,6 +39,7 @@ defmodule Blog.Mixfile do
      {:faker, "~> 0.5", only: [:test, :dev]},
      {:scrivener, "~> 1.0"},
      {:scrivener_html, "~> 1.1"},
+     {:comeonin, "~> 2.0"},
      {:cowboy, "~> 1.0"}]
   end
 

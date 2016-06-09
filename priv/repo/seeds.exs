@@ -20,3 +20,8 @@ create_post = fn(_) ->
 end
 
 Enum.each 1..100, create_post
+
+registration_changeset = User.registration_changeset(%User{},
+  %{email: "ceritium@gmail.com", password: "123456"}
+)
+Repo.insert!(registration_changeset)
