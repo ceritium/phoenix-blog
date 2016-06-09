@@ -25,4 +25,3 @@
 <%= pagination_links @conn, @posts, path: &admin_post_path/3 %>
 
 <%= link "New post", to: admin_post_path(@conn, :new) %>
-
