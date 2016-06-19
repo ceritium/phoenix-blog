@@ -1,7 +1,7 @@
 <%= for post <- @posts do %>
 
   <h2>
-    <%= post.title %>
+    <%= link post.title, to: post_path(@conn, :show, post) %>
   </h2>
   <p>
     <%= post.content %>

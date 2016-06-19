@@ -19,7 +19,7 @@ defmodule Blog.Router do
 
 
     resources "/sessions", SessionController, only: [:new, :create, :delete]
-    resources "/posts", PostController, only: [:index]
+    resources "/posts", PostController, only: [:index, :show]
     get "/", PostController, :index
 
     scope "admin", Admin, as: :admin do
