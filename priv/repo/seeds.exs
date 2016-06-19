@@ -12,11 +12,15 @@
 #
 alias Blog.Repo
 alias Blog.Post
+alias Blog.User
 
 Faker.start
 
 create_post = fn(_) ->
-  Repo.insert!(%Post{title: Faker.Lorem.Shakespeare.hamlet})
+  Repo.insert!(%Post{
+    title: Faker.Lorem.Shakespeare.hamlet,
+    content: Faker.Lorem.paragraph(%Range{first: 5, last: 10})
+  })
 end
 
 Enum.each 1..100, create_post

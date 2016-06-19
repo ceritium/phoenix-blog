@@ -20,6 +20,7 @@ defmodule Blog.Router do
     get "/", PageController, :index
 
     resources "/sessions", SessionController, only: [:new, :create, :delete]
+    resources "/posts", PostController, only: [:index]
 
     scope "admin", Admin, as: :admin do
       pipe_through :authenticate_user
