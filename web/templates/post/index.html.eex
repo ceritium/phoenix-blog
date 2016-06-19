@@ -9,4 +9,4 @@
 
 <% end %>
 
-<%= pagination_links @conn, @posts %>
+<%= pagination_links @conn, @posts, path: &post_path/3 %>

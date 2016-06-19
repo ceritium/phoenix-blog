@@ -17,10 +17,10 @@ defmodule Blog.Router do
   scope "/", Blog do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
 
     resources "/sessions", SessionController, only: [:new, :create, :delete]
     resources "/posts", PostController, only: [:index]
+    get "/", PostController, :index
 
     scope "admin", Admin, as: :admin do
       pipe_through :authenticate_user

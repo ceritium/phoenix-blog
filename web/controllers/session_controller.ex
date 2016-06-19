@@ -21,6 +21,6 @@ defmodule Blog.SessionController do
   def delete(conn, _) do
     conn
     |> Blog.Auth.logout()
-    |> redirect(to: page_path(conn, :index))
+    |> redirect(to: post_path(conn, :index))
   end
 end
