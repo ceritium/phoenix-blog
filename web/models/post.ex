@@ -1,4 +1,7 @@
 defmodule Blog.Post do
+  @moduledoc """
+    Post represent each article of the blog
+  """
   use Blog.Web, :model
 
   schema "posts" do

@@ -1,4 +1,8 @@
 defmodule Blog.User do
+  @moduledoc """
+    User is the admin of the blog.
+  """
+
   use Blog.Web, :model
 
   schema "users" do

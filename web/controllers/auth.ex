@@ -1,4 +1,8 @@
 defmodule Blog.Auth do
+  @moduledoc """
+  This module allow login, logout and authenticate users.
+  """
+
   import Plug.Conn
 
   def init(opts) do

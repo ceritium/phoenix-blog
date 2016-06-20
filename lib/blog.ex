@@ -1,4 +1,9 @@
 defmodule Blog do
+   @moduledoc """
+     This is my blog in elixir and phoenix!
+
+     Yeah!
+   """
   use Application
 
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
