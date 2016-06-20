@@ -25,6 +25,7 @@ defmodule Blog.Router do
     scope "admin", Admin, as: :admin do
       pipe_through :authenticate_user
       resources "/posts", PostController
+      resources "/users", UserController
     end
   end
 
