@@ -24,12 +24,12 @@ defmodule Blog.User do
     |> put_pass_hash()
   end
 
-  defp put_pass_hash(changeset) do
-    case changeset do
+  defp put_pass_hash(change) do
+    case changes do
       %Ecto.Changeset{valid?: true, changes: %{password: pass}} ->
-        put_change(changeset, :password_hash, Comeonin.Bcrypt.hashpwsalt(pass))
+        put_change(change, :password_hash, Comeonin.Bcrypt.hashpwsalt(pass))
       _ ->
-        changeset
+        change
     end
   end
 end
